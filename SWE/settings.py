@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Load .env file
 load_dotenv(BASE_DIR / ".env")
 
-# Store API key 
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 from pathlib import Path
@@ -112,8 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 # settings.py
 LANGUAGE_CODE = "en"   # default
@@ -127,7 +125,7 @@ USE_I18N = True
 USE_L10N = True
 
 LOCALE_PATHS = [
-    BASE_DIR / "locale",   # Django will put translation files here
+    BASE_DIR / "locale",   
 ]
 
 
