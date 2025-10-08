@@ -15,9 +15,10 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Load .env file
 load_dotenv(BASE_DIR / ".env")
 
-# Store API key securely
+# Store API key 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 from pathlib import Path
