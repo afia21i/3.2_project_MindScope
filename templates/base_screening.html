@@ -12,16 +12,20 @@
   <div class="page-container">
     <header class="navbar">
       <div class="nav-left">
-  
-       <a href="{% url 'landingpage' %}" 
-   onclick="if(document.referrer && document.referrer !== window.location.href){ window.location=document.referrer; return false; }" 
-   class="back-btn">←</a>
-        <div class="logo">
-          <a href="{% url 'home' %}">
-            <img src="{% static 'images/logo.png' %}" alt="MindScope Logo">
-          </a>
-        </div>
-      </div>
+  <a href="{% if user.is_authenticated %}{% url 'home' %}{% else %}{% url 'landingpage' %}{% endif %}"
+     onclick="if (document.referrer && document.referrer !== window.location.href) { 
+       window.location = document.referrer; 
+       return false; 
+     }"
+     class="back-btn">←</a>
+
+  <div class="logo">
+    <a href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="MindScope Logo">
+    </a>
+  </div>
+</div>
+
 
       <div class="nav-right">
         <nav>
