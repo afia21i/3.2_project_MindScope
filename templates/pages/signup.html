@@ -6,7 +6,7 @@
   <section class="auth-form">
     <h2>Create Account</h2>
 
-    <form method="POST" action="{% url 'signup' %}">
+    <form method="POST">
       {% csrf_token %}
       <input type="text" name="full_name" placeholder="Full Name" required>
       <input type="password" name="password" placeholder="Password" required>
