@@ -23,11 +23,11 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like : BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
+# Quick-start development settings - unsuitable for product development 
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -82,7 +82,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'SWE.wsgi.application'
 
 
-# Database
+# Database settings
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
@@ -93,7 +93,7 @@ DATABASES = {
 }
 
 
-# Password validation
+# Password validation setting
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
